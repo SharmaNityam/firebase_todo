@@ -57,15 +57,18 @@ lib/
       QuerySnapshot: Used to fetch tasks from Firestore in pages.
       DocumentSnapshot: Used for operations on individual tasks, like transactions or           
                         pagination.
+
 **2. FutureBuilder & StreamBuilder**
       FutureBuilder: Fetches data once for pagination.
       StreamBuilder: Listens for real-time updates to tasks.
+
 **3. Pagination**
 Efficient pagination is implemented using Firestore’s startAfterDocument feature:
   ```dart
 
   query.startAfterDocument(_lastDocument!).limit(_pageSize);
   ```
+
 **4. Batch Writes**
 Batch writes allow adding multiple tasks in one operation:
   ```dart
@@ -74,6 +77,7 @@ Batch writes allow adding multiple tasks in one operation:
   batch.set(documentRef, data);
   batch.commit();
   ```
+
 **5. Transactions**
 Transactions ensure safe updates to Firestore documents:
   ```dart
