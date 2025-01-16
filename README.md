@@ -55,8 +55,7 @@ lib/
 ## Features Demonstrated
 **1. QuerySnapshot & DocumentSnapshot**
       QuerySnapshot: Used to fetch tasks from Firestore in pages.
-      DocumentSnapshot: Used for operations on individual tasks, like transactions or           
-                        pagination.
+      DocumentSnapshot: Used for operations on individual tasks, like transactions or pagination.
 
 **2. FutureBuilder & StreamBuilder**
       FutureBuilder: Fetches data once for pagination.
